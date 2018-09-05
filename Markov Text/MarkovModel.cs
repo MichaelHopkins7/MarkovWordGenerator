@@ -38,6 +38,21 @@ namespace Markov_Text
                 AddEndCharacter();
             }
         }
+
+        private void AddEndCharacter()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddMiddleCharacter()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddFirstCharacter()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 }

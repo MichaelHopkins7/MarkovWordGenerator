@@ -26,6 +26,7 @@ namespace Markov_Text
         {
             string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
             string filepath = $"{wanted_path}\\words_alpha.txt";
+
             return filepath;
         }
     }

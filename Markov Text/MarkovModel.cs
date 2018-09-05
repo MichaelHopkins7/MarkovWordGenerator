@@ -42,6 +42,7 @@ namespace Markov_Text
         private void AddEndCharacter()
         {
             throw new NotImplementedException();
+            
         }
 
         private void AddMiddleCharacter()

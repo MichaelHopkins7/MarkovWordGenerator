@@ -11,17 +11,22 @@ namespace Markov_Text
     {
         static void Main(string[] args)
         {
-            string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
-            string filepath = $"{wanted_path}\\words_alpha.txt";
+            
+            var filepath = Filepath();
 
             string[] lines = System.IO.File.ReadAllLines(filepath);
 
-            Console.WriteLine(wanted_path);
+            var model = new MarkovModel();
+            model.AddWords(lines);
 
-            for (var i = 0; i < 10; ++i)
-            {
-                Console.WriteLine("\t" + lines[i]);
-            }
+            
+        }
+
+        static string Filepath()
+        {
+            string wanted_path = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory())));
+            string filepath = $"{wanted_path}\\words_alpha.txt";
+            return filepath;
         }
     }
 }

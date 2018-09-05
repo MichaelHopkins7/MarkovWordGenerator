@@ -27,10 +27,16 @@ namespace Markov_Text
         MiddleCharacter[] middleCharacters = new MiddleCharacter[26];
         FinalCharacter[] finalCharacters = new FinalCharacter[26];
 
+        public void AddWords(string[] words)
+        {
+            foreach (var word in words)
+            {
+                this.AddWord(word);
+            }
+        }
 
         public void AddWord(string word)
         { 
-            throw new NotImplementedException();
             if (word.Length > 3)
             {
                 AddFirstCharacter();

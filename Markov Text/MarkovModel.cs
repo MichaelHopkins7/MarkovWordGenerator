@@ -11,6 +11,31 @@ namespace Markov_Text
 
     class MarkovModel
     {
+        Random rand;
+
+        CharacterFunction[] firstCharacters;
+        CharacterFunction[] middleCharacters;
+        CharacterFunction[] finalCharacters;
+
+        public string GenerateWord(int minLen, int maxlen)
+        {
+            var wordLength = rand.Next(minLen, maxlen + 1);
+
+            var firstCharIndex = rand.Next(firsts);
+
+            for ()
+        }
+
+        public MarkovModel()
+        {
+            rand = new Random();
+
+            CharacterFunction[] firstCharacters = InitCharacterFunctions();
+            CharacterFunction[] middleCharacters = InitCharacterFunctions();
+            CharacterFunction[] finalCharacters = InitCharacterFunctions();
+
+        }
+
         private CharacterFunction[] InitCharacterFunctions()
         {
             var characterFuntions = new CharacterFunction[26];
@@ -50,14 +75,6 @@ namespace Markov_Text
             CharInstance nextChars;
 
         }
-
-        public MarkovModel()
-        {
-            CharacterFunction[] firstCharacters = InitCharacterFunctions();
-            CharacterFunction[] middleCharacters = InitCharacterFunctions();
-            CharacterFunction[] finalCharacters = InitCharacterFunctions();
-        }
-        
 
         public void AddWords(string[] words)
         {
